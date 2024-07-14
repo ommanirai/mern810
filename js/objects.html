@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>object in js</h1>
+    <script>
+        /*
+        OBJECT
+        {} => block
+         => collection of key/value, name/value, property/value pair
+         two way of accessing object values:
+         1. bracket notation method
+         syntax:
+         object_name['key/name/property']
+
+         2. dot notation method
+         syntax:
+         object_name.key
+        
+        */
+        var details = {
+            name: 'sujal',
+            address: {
+                tempAddress:'kathmandu',
+                permanentAddress:'pokhara'
+            },
+            phone: ['982323423423423', '23423422', '2234234324'],
+            name:'rahul',
+        }
+        console.log(details['address']['tempAddress'])
+        console.log(details.address.tempAddress)
+        console.log(details.phone[2])
+        //console.log(details)
+        // bracket notation method
+        //console.log(details['name'])
+        //var names = details['name']
+        //console.log(names)
+        // dot notation method
+        //console.log(details.name)
+
+        details['status'] = "active"
+        details['name'] = 'samir'
+        console.log(details)
+
+
+        
+    </script>
+</body>
+
+</html>

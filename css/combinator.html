@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>combinator</title>
+    <style>
+        /*
+        combinator in css
+        types:
+        1. grouping combinator(,)
+        2. descendent combinator(space)
+        3. child combinator(>)
+        4. general sibling combinator(~)
+        5. adjacent sibling combinator(+)
+        
+        */
+
+        /* grouping combinator */
+        h1,
+        .demo {
+            color: red;
+        }
+
+        /* descendent selector */
+        div p {
+            color: blue;
+        }
+        /* child combinator */
+        .parent>ul {
+            display: flex;
+            list-style: none;
+            background-color: blue;
+            justify-content: space-evenly;
+        }
+        /* child combinator */
+        .par>p{
+            color: violet;
+        }
+        /* general selector */
+        .grandchild~div{
+            background-color: rgb(12, 173, 125);
+        }
+        /* adjacent selector */
+        .grandchild+div{
+            background-color: rgb(221, 8, 168);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="our-parent">
+        our parent
+        <div class="child">child 1</div>
+        <div class="child">child 2
+            <div class="grandchild">grandchild 1</div>
+            <div class="grandchild1">grandchild 2</div>
+            <div class="grandchild1">grandchild 3</div>
+            <span>span</span>
+        </div>
+        <div class="child">child 3</div>
+    </div>
+    <div class="par">
+        <p>Paragraph 1 in the div.</p>
+        <p>Paragraph 2 in the div.</p>
+        <section>
+          <!-- not Child but Descendant -->
+          <p>Paragraph 3 in the div (inside a section element).</p>
+        </section>
+        <p>Paragraph 4 in the div.</p>
+      </div>
+
+    <!-- <h1>list of fruits</h1>
+    <div class="parent">
+        <ul>
+            <li>mango</li>
+            <li>kiwi</li>
+            <li>papaya</li>
+            <li>orange
+                <ul>
+                    <li>type 1</li>
+                    <li>type 2</li>
+                    <li>type 3</li>
+                    <li>type 4</li>
+                </ul>
+            </li>
+        </ul>
+    </div> -->
+
+
+    <!-- <div class="hi">
+        <p>paragraph inside hi class</p>
+    </div>
+    <h1>hello</h1>
+    <p>hi</p>
+    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel amet sit beatae ipsam neque distinctio optio
+        deserunt? Esse sunt sit, nesciunt harum cum, obcaecati impedit ut optio error hic a!</span>
+    <div class="demo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum amet fugit quod molestias, magnam
+        architecto deleniti saepe, provident dolor exercitationem quaerat reiciendis illo beatae vero quidem est enim
+        veniam veritatis.</div> -->
+</body>
+
+</html>

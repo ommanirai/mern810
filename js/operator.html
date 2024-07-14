@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator</title>
+</head>
+
+<body>
+    <h1>operator</h1>
+    <script>
+        /*
+        operator in javascript
+        => operator is a symbol which perform specific task with operand
+
+        types:
+        1. arithmetic operator
+        +
+        -
+        /(division)
+        *(multiplication)
+        %(remainder)
+        ++(increment operator)
+        --(decrement operator)
+
+        2. relational operator
+        => returns either true or false
+        <
+        >
+        <=
+        >=
+        !=
+
+        3. logical operator
+            a. logical and(&&)
+            condition1      condition2      result(condition1 && condition2)
+            true            true            true && true => true
+            true            false           true && false => false
+            false           true            false && true => false
+            false           false           false && false => false
+
+            condition1      condition2       condition3     result(condition1 && condition2 && condition3)
+            true            true             true
+            true            true             false
+
+            b. logical or(||)
+            condition1      condition2      result(condition1 || condition2)
+            true            true            true || true => true
+            true            false           true || false => true
+            false           true            false || true => true
+            false           false           false || false => false
+
+            c. logical not(!)
+            condition1      result(!condition1)
+            true            !true => false
+            false           !false => true
+
+
+
+        4. assignment operator
+        =
+        +=
+        -=
+        /=
+        *=
+        %=
+
+        5. concatinate operator
+        +
+        ,
+
+        6. comparision operator
+        => returns either true or false
+        ==
+        ===
+
+        7. conditional operator(ternary)
+        syntax:
+        condition ? body of truth : body of false
+        */
+        var n1 = 2;
+        var n2 = 2;
+
+        var result = n1 % n2;
+        // + => operator
+        // n1 and n2 is operand
+        //console.log(result)
+
+        n1++;
+        n1 = n1 + 1;
+        console.log(n1)
+
+        n2--;
+        n2 = n2 - 1
+        console.log(n2)
+
+
+        // relational operator
+        var a = 12;
+        var b = 12;
+        console.log(a >= b)
+        console.log(a != b)
+
+        //a > b , a< b, a >=b, a <=b
+
+
+        // assignment operator
+        //a++
+        //a = a + 1
+
+        //a += b;
+        a = a + b
+        console.log(a)
+
+        // concatinate 
+        console.log("the value of a is: " + a)
+        console.log("the value of a is: ", a)
+
+        // comparision
+        var x = '12';
+        var y = 12;
+        console.log(x == y)
+        console.log(x === y)
+
+        // logical and
+        var nepali = 25;
+        var math = 67;
+        console.log("result is: ", nepali > 35 && math > 35)
+        var result = nepali > 35 && math > 35
+        console.log("result is: ", result)
+
+        // logical or
+        console.log(nepali > 35 || math > 35)
+
+        // logical not
+        var c = false;
+        console.log(!c)
+
+        // conditional operator
+        var number = Number(prompt("enter numebr to check odd/even and positive/negative"));
+        // number = Number(number)
+        console.log("user input number is: ", number)
+        number > 0
+            ? number > 10
+                ? number > 100
+                    ? console.log("positive numeber, greater than 10 and 100")
+                    : console.log("positive numeber, greater than 10, less than 100")
+                : console.log("positive number, less than 10")
+
+            : console.log('negative number')
+
+
+
+        number % 2 == 0
+            ? console.log("even number")
+            : console.log("odd number")
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <h1>Object in Javascript</h1>
+    <script>
+        /*
+        array and object
+        object
+        => object is key/value, name/value, property/value pair 
+
+        two way of accessing object values:
+        1. dot notation method
+        syntax:
+        object_name.key
+        2. bracket notation method
+        syntax:
+        object_name['key/name/property']
+        */
+        var details = {
+            name:'rejina',
+            address:{
+                temporaryAddress:'ktm',
+                permanentAddress:'Sindhupalchok'
+            },
+            phone:2323,
+            email:"rejina@gmail.com",
+            phone:12
+        }
+        details['name'] = 'unisha'
+        details['status'] = 'active'
+        details.iphone = 15
+        console.log(details)
+        /*
+        console.log(details)
+        console.log(details.email)
+        console.log(details['address']['permanentAddress'])
+        var a = details['address']
+        var b = a['permanentAddress']
+        console.log("result in b is: ", b)
+        
+        console.log(details.address.permanentAddress)
+        var x = details.address
+        var y = x.permanentAddress
+        console.log("permanent address of rejina is: ", y)
+        var a = 23
+        // overwrite
+        a = 12
+        console.log(a)
+        console.log(details.phone)
+        */
+    </script>
+</body>
+</html>

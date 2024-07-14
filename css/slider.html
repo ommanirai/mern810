@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            font-size: 50px;
+        }
+        .parent{
+            width: 600px;
+            height: 600px;
+            background-color: blue;
+            margin: auto;
+            position: relative;
+        }
+        img{
+            width: 600px;
+            height: 600px;
+        }
+        .left{
+            position: absolute;
+            top: 40%;
+        }
+        .right{
+            position: absolute;
+            right: 0;
+            top: 40%;
+        }
+        .right:hover{
+            color: red;
+            /*cursor: pointer, progress, crosshair */
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <img src="../html/shoes1.jpg" alt="" width="400px" height="400px">
+        <p class="left">&lt;</p>
+        <p class="right">&gt;</p>
+    </div>
+</body>
+
+</html>

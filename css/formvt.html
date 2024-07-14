@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1 {
+        text-align: center;
+    }
+
+    form {
+        width: 50%;
+        margin: auto;
+        border: 1px solid springgreen;
+        padding: 10px;
+        border-radius: 20px;
+    }
+
+    label {
+        display: inline-block;
+        width: 25%;
+    }
+
+    input,
+    select,
+    textarea {
+        display: inline-block;
+        width: 70%;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    input[type="file"] {
+        border: 1px solid lightcyan;
+    }
+
+    .custom-div {
+        width: 70%;
+        border: 1px solid turquoise;
+    }
+
+    input[type="submit"],
+    input[type="reset"] bottom {
+        width: 100px;
+        background-color: steelblue;
+    }
+    input[type="submit"] :hover,
+    input[type="reset"]:hover, 
+    bottom :hover {
+        width: 100px;
+        background-color: slateblue;
+        cursor: pointer;
+    }
+    
+    button{
+        padding: 10px;
+    }
+    .custom-buttom{
+        text-align: center;
+        margin-top: 20PX;
+    }
+</style>
+<body>
+    <body>
+        <h1>Register Here</h1>
+        <!-- input type: text, password, email, number, date, file, select, textarea, search, radio, reset, checkbox -->
+        <form method="" action="" target="_self">
+            <label for="search">Search</label>
+            <input type="search" placeholder="Search Here">
+
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter Your Username" name="username">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter Your Password" name="password">
+
+            <label for="cpassword">Confirm Password</label>
+            <input type="password" id="cpassword" placeholder="Enter Your Password" name="password">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter Your Email" name="email">
+
+            <label for="phone">Phone</label>
+            <input type="number" id="phone" name="phone">
+
+            <label for="dob">Date of Birth</label>
+            <input type="date">
+
+            <label for="profile">Profile</label>
+            <input type="file" name="" id="">
+
+            <label for="country">Country</label>
+            <select name="" id="">
+                <option value="">select your country</option>
+                <option value="">Nepal</option>
+                <option value="">USA</option>
+                <option value="">India</option>
+                <option value="">Australia</option>
+            </select>
+
+            <label for="msg">Feedback</label>
+            <textarea name="" id="" cols="50" rows="10"></textarea>
+
+            <div class="gender">
+                <label for="gender">Gender</label>
+                <span class="custom-div">
+                    <input type="radio" name="gender" id="male">
+                    <label for="male" class="custom-gender">Male</label>
+                    <input type="radio" name="gender" id="female">
+                    <label for="female" class="custom-gender">Female</label>
+                    <input type="radio" name="gender" id="others">
+                    <label for="others" class="custom-gender">Others</label>
+                </span>
+            </div>
+
+            <div class="skill">
+                <label for="skills">Skill</label>
+                <div class="custom-div">
+                    <input type="checkbox" id="html">
+                    <label for="html">HTML</label>
+                    <input type="checkbox" id="css">
+                    <label for="css">CSS</label>
+                    <input type="checkbox" id="javascript">
+                    <label for="javascript">Javascript</label>
+                </div>
+            </div>
+
+            <div class="custom-button">
+                <input type="submit" value="Register">
+                <input type="reset">
+                <button>Register</button>
+            </div>
+
+    </body>
+
+</html>

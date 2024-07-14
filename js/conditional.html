@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>conditional operator</h1>
+    <script>
+        /*
+        n = user input
+        3 and 7
+        
+        */
+        var num =Number(prompt("enter number"))
+        num % 3 == 0 && num % 7==0
+        ? console.log(num+ ' is divisible by 3 and 7')
+        //: console.log(num+ 'is not divisible by 3 or/and 7')
+        : num % 3 == 0 || num % 7==0
+            ? num % 3 == 0
+                ? console.log(num+ " is divisible by 3 not divisble by 7")
+                : console.log(num+ " is divisible by 7 not divisble by 3")
+            : console.log(num + " is not divisible by both 3 and 7")
+
+
+        // login system
+        // check user
+        /*
+        register
+        reg_email
+        reg_password
+
+        login:
+        log_email
+        log_password
+        
+        */
+    </script>
+</body>
+</html>

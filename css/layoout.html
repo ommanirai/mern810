@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+</head>
+
+
+</body>
+<style>
+    * {
+        margin: 0;
+    }
+
+    .page {
+        display: flex;
+        list-style: none;
+        justify-content: space-evenly;
+        background-color: paleturquoise;
+    }
+
+    li {
+        padding: 10px;
+    }
+
+    li:hover {
+        color: rebeccapurple;
+        cursor: pointer;
+    }
+
+    .main {
+        display: flex;
+        width: 100%;
+    }
+
+    .left {
+        width: 25%;
+        background-color: indigo;
+        height: 640px;
+    }
+
+    .right {
+        width: 75%;
+    }
+
+    .right-top {
+        width: 100%;
+        background-color: thistle;
+        height: 320px;
+    }
+
+    .right-bottom {
+        display: flex;
+        width: 100%;
+    }
+
+    .right-bottom-left {
+        width: 50%;
+        background-color: powderblue;
+        height: 320px;
+    }
+
+    .right-bottom-right {
+        width: 50%;
+        background-color: rgb(209, 14, 192);
+        height: 320px;
+    }
+
+    .footer {
+        width: 100%;
+        background-color: orchid;
+        height: 40px;
+    }
+
+    .page li {
+        position: relative;
+    }
+
+    .category {
+        display: none;
+        position: absolute;
+        color: black;
+        list-style: none;
+        background-color: aliceblue;
+        padding: 0;
+    }
+
+    .page li:hover .category {
+        display: block;
+        position: absolute;
+    }
+
+    .category li:hover {
+        background-color: lemonchiffon
+    }
+
+    .hai {
+        color: red;
+    }
+
+    .message {
+        color: black;
+    }
+    select{
+        display: none;
+    }
+
+    @media screen and (max-width:600px) {
+        .header {
+            display: none;
+        }
+
+        select {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: teal;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .main {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .left {
+            width: 100%;
+            height: 300px;
+        }
+
+        .right {
+            width: 100%;
+        }
+
+        .right-top {
+            width: 100%;
+            height: 200px;
+
+        }
+    }
+</style>
+
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+</head>
+
+<body>
+    <select name="" id="">
+        <option value="">Home</option>
+        <option value="">Product</option>
+        <option value="">Gallery</option>
+        <option value="">Blogs</option>
+        <option value=""> map</option>
+    </select>
+    <div class="header">
+        <ul class="page">
+            <li>Home</li>
+            <li>Products
+                <ul class="category">
+                    <li>Computer</li>
+                    <li>Smartphone</li>
+                    <li>Camera</li>
+                    <li>Beauty</li>
+                    <li>Health</li>
+                </ul>
+            </li>
+            <li>Gallery</li>
+            <li>Blogs</li>
+            <li>Contact</li>
+            <li>Map</li>
+            <li><box-icon name='message-square-dots message'></box-icon></li>
+            <span class="material-symbols-outlined hai">
+                favorite
+            </span>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="left">left</div>
+        <div class="right">
+            <div class="right-top">right top</div>
+            <div class="right-bottom">
+                <div class="right-bottom-left">right bottom left</div>
+                <div class="right-bottom-right">right bottom rght</div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">footer</div>
+
+</html>

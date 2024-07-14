@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .page{
+            display: flex;
+            list-style: none;
+            justify-content: space-evenly;
+            background-color: green;
+        }
+        li{
+            padding: 10px;
+        }
+        li:hover{
+            color: red;
+            cursor: pointer;
+        }
+        .main{
+            display: flex;
+            width: 100%;
+        }
+        .left{
+            width: 25%;
+            background-color: blue;
+            height: 640px;
+        }
+        .right{
+            width: 75%;
+        }
+        .right-top{
+            width: 100%;
+            background-color: rgb(88, 82, 82);
+            height: 320px;
+        }
+        .right-bottom{
+            display: flex;
+            width: 100%;
+        }
+        .right-bottom-left{
+            width: 50%;
+            background-color: yellow;
+            height: 320px;
+        }
+        .right-bottom-right{
+            width: 50%;
+            background-color: rgb(209, 14, 192);
+            height: 320px;
+        }
+        .footer{
+            width: 100%;
+            background-color: black;
+            height: 40px;
+        }
+        .page li{
+            position: relative;
+        }
+        .category{
+            display: none;
+            position: absolute;
+            color: black;
+            list-style: none;
+            background-color: aliceblue;
+            padding: 0;
+        }
+        .page li:hover .category{
+            display: block;
+            position: absolute;
+        }
+        .category li:hover{
+            background-color: yellowgreen;
+        }
+
+        select{
+            display: none;
+        }
+
+        @media screen and (max-width:600px) {
+            .header{
+                display: none;
+            }
+            select{
+                display: block;
+                width: 100%;
+                padding: 10px;
+                background-color: rgb(210, 20, 99);
+                text-align: center;
+                font-size: 20px;
+            }
+            .main{
+                flex-direction: column;
+                width: 100%;
+            }
+            .left{
+                width: 100%;
+                height: 300px;
+            }
+            .right{
+                width: 100%;
+            }
+            .right-top{
+                width: 100%;
+                height: 200px;
+            }
+            .right-bottom{
+                flex-direction: column;
+            }
+            .right-bottom-left, .right-bottom-right{
+                width: 100%;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <select name="" id="">
+        <option value="">Home</option>
+        <option value="">Product</option>
+        <option value="">Blog</option>
+        <option value="">About</option>
+        <option value="">Contact</option>
+    </select>
+    <div class="header">
+        <ul class="page">
+            <li>Home</li>
+            <li>Products
+                <ul class="category">
+                    <li>Computer</li>
+                    <li>Smartphone</li>
+                    <li>Camera</li>
+                    <li>Beauty</li>
+                    <li>Health</li>
+                </ul>
+            </li>
+            <li>Gallery</li>
+            <li>Blogs</li>
+            <li>Contact</li>
+            <li>Map</li>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="left">left</div>
+        <div class="right">
+            <div class="right-top">right top</div>
+            <div class="right-bottom">
+                <div class="right-bottom-left">right bottom left</div>
+                <div class="right-bottom-right">right bottom rght</div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">footer</div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .parent{
+            display: grid;
+            grid-template-rows: 50px 300px 310px 50px;
+            grid-template-columns: 20% 30% 50%;
+        }
+        .header{
+            grid-column-start: 1;
+            grid-column-end: 4;
+            background-color: red;
+        }
+        .left{
+            grid-row-start: 2;
+            grid-row-end: 4;
+            background-color: blue;
+        }
+        .right-top{
+            grid-column-start: 2;
+            grid-column-end: 4;
+            background-color: yellow;
+        }
+        .right-bottom-left{
+            grid-column-start: 2;
+            grid-column-end: 3;
+            background-color: green;
+        }
+        .right-bottom-right{
+            grid-column-start: 3;
+            grid-column-end: 4;
+            background-color: black;
+        }
+        .footer{
+            grid-column-start: 1;
+            grid-column-end: 4;
+            background-color: violet;
+            grid-row-start: 4;
+            grid-row-end: 5;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="header">header</div>
+        <div class="footer">footer</div>
+        <div class="left">left</div>
+        <div class="right-top">right top</div>
+        <div class="right-bottom-left">right bottom left</div>
+        <div class="right-bottom-right">right bottom rght</div>
+    </div>
+</body>
+
+</html>
