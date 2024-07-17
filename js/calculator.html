@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>My Calculator</h1>
+    <script>
+        /*
+        calculator
+        first_number
+        symbol
+        second_number
+
+        
+        
+        */
+        var first_number = Number(prompt("enter first number"))
+        var symbol = prompt("enter symbol")
+        var second_number = Number(prompt("enter second number"))
+        if (symbol == "+") {
+            var sum = first_number + second_number;
+            console.log(sum)
+        }
+        else if (symbol == "-") {
+            var diff = first_number - second_number;
+            console.log(diff)
+        }
+        else if (symbol == "/") {
+            console.log(first_number / second_number)
+        }
+        else if (symbol == "*") {
+            console.log(first_number * second_number)
+        }
+        else if (symbol == "^") {
+            /*
+            if (second_number == 1) {
+
+                var pow = first_number
+                console.log(pow)
+            }
+            if (second_number == 2) {
+                var pow = first_number * first_number
+                console.log(pow)
+            }
+            */
+            var pow = Math.pow(first_number, second_number)
+            console.log(pow)
+        }
+        else if (symbol == "sr") {
+            var sqrt = Math.sqrt(first_number)
+            console.log(sqrt)
+        }
+        else {
+            console.log("invalid symbol")
+            console.log("please check symbol and enter again")
+        }
+
+    </script>
+</body>
+
+</html>
