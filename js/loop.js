@@ -72,6 +72,12 @@ for(i=1;i<=10;i++){
 sum = 55
 
 6. wap to print the factorial of a number 5
+7. wap to print the fibonacci series of a number
+0   1   1   2   3   5   8   13  21  34
+next => sum of last two number
+
+8. wap to check the number is prime or composite
+1 and self
 
 2. while loop
 3. do while loop
