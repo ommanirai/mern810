@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nested loop</title>
+</head>
+
+<body>
+    <h1>nested loop</h1>
+    <script>
+        /*
+        *
+        **
+        ***
+        ****
+        *****
+        */
+        for (i = 1; i <= 5; i++) { // i = 1, 2
+            for (j = 1; j <= i; j++) { // dom => document.write
+               document.write("*")
+            }
+            document.write("<br>")
+        }
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<br>")
+        /*
+        *****
+        ****
+        ***
+        **
+        *
+        */
+        for (i = 5; i > 0; i--) { // i = 1, 2
+            for (j = 1; j <= i; j++) { // dom => document.write
+               document.write("*")
+            }
+            document.write("<br>")
+        }
+
+        /*
+        1.
+        1
+        1   2
+        1   2   3
+        1   2   3   4
+        1   2   3   4   5
+
+        2. 
+        5 4 3 2 1
+        5 4 3 2
+        5 4 3
+        5 4 
+        5
+
+        3. 
+        1
+        1 3
+        1 3 5
+        1 3 5 7
+        1 3 5 7 9
+
+        4.
+        2 
+        2 4
+        2 4 6
+        2 4 6 8
+        2 4 6 8 10
+        */
+    </script>
+</body>
+
+</html>
