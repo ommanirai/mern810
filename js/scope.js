@@ -45,7 +45,6 @@ scope
 // console.log(a)
 // console.log(n)
 
-
 // block scope
 // {}
 var text = "hi"
