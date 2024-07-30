@@ -51,14 +51,6 @@ var number = [1, 2, 3, 4, 5, 23, 4, 3, 4]
 // 2. function with argument
 
 
-var fruit = ['papaya', 'kiwi', 'apple', 'orange', 'kiwi', 'papaya']
-// result
-// var result = {
-//     "papaya":2,
-//     'kiwi':2,
-//     "apple":1,
-//     "orange":1
-// }
 var bikes = ['honda', 'yamaha', 'honda','yamaha']
 
 function uniqueItem(args) {
