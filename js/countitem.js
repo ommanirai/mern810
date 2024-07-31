@@ -1,6 +1,9 @@
 var fruit = ['papaya', 'kiwi', 'apple', 'orange', 'kiwi', 'papaya']
-var bikes = ['honda', 'yamaha', 'honda','yamaha']
-var number = [1, 2, 3, 4, 5, 23, 4, 3, 4]
+var bikes = ['honda', 'yamaha', 'honda', 'yamaha']
+var number = [1, 2, 3, 4, 5]
+// sum of array numebr => result => 15
+// filter odd number => [1,3,5]
+// filter even number => [2,4]
 
 // result
 // var result = {
@@ -10,16 +13,24 @@ var number = [1, 2, 3, 4, 5, 23, 4, 3, 4]
 //     "orange":1
 // }
 
-function CountItem(array_name){
+function CountItem(array_name) {
     var countItem = {}
     array_name.forEach(function (item, index) {
         // papaya:1
         // papaya++
-        if (countItem[item] == undefined) {
-            countItem[item] = 1
+        // if (countItem[item] == undefined) {
+        //     countItem[item] = 1
+        // }
+        // else {
+        //     countItem[item]++
+        // }
+
+
+        if (countItem.hasOwnProperty(item) == true) {
+            countItem[item]++
         }
         else {
-            countItem[item]++
+            countItem[item] = 1
         }
     })
 

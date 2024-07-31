@@ -38,7 +38,7 @@ var details = {
 }
 // console.log(Object.keys(details))
 // console.log(Object.values(details))
-// console.log(details.hasOwnProperty('names'))
+console.log(details.hasOwnProperty('names'))
 
 // for, while, do while
 // object loop
