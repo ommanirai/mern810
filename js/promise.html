@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>promise in js</h1>
+    <script>
+        var skills = ['c', 'c++', 'python', 'javascript']
+        function displayItem(item) {
+            setTimeout(function () {
+                skills.map(function (item, index) {
+                    return document.write(item, "<br>")
+                })
+            }, 3000)
+        }
+        function addSkill() {
+            // var promsie = new Promise(function (resolve, reject) {
+            return new Promise(function (resolve, reject) {
+                var condition = true;
+                setTimeout(function () {
+                    if (condition) {
+                        skills.push("java")
+                        resolve()
+                    }
+                    else {
+                        reject()
+                    }
+                }, 4000)
+            })
+            // return promise
+        }
+
+        displayItem(skills)
+
+        addSkill()
+        .then(function(){
+            displayItem(skills)
+            console.log("success in skill add")
+        })
+        .catch(function(){
+            console.log("failure in skill add")
+        })
+
+    </script>
+</body>
+
+</html>

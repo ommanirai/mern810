@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>callback</h1>
+    <script>
+        /*
+        to work with asynchronous behaviour in javascript:
+        1. callback
+        2. promise
+        3. async await
+        
+        
+        */
+        // setInterval(function () {
+        //     document.write("i am callback")
+        // },5000)
+
+        // callback
+        // var skills = ['c', 'c++', 'python', 'javascript']
+
+        // function displayItem(item) {
+        //     setTimeout(function () {
+        //         skills.map(function (item, index) {
+        //             return document.write(item, "<br>")
+        //         })
+        //     }, 3000)
+        // }
+
+        // function addSkill() {
+        //     setTimeout(function () {
+        //         skills.push("java")
+        //     }, 4000)
+        // }
+        // displayItem(skills)
+        // addSkill()
+        // displayItem(skills)
+
+
+
+        var skills = ['c', 'c++', 'python', 'javascript']
+
+        function displayItem(item) {
+            setTimeout(function () {
+                skills.map(function (item, index) {
+                    return document.write(item, "<br>")
+                })
+            }, 3000)
+        }
+
+        function addSkill(cb) {
+            // cb is callback
+            setTimeout(function () {
+                skills.push("java")
+                cb()
+            }, 4000)
+        }
+        displayItem(skills)
+        addSkill(displayItem)
+    </script>
+</body>
+
+</html>

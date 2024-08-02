@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>async await in js</h1>
+    <script>
+        var skills = ['c', 'c++', 'python', 'javascript']
+        function displayItem(item) {
+            setTimeout(function () {
+                skills.map(function (item, index) {
+                    return document.write(item, "<br>")
+                })
+            }, 3000)
+        }
+        function addSkill() {
+            return new Promise(function (resolve, reject) {
+                var condition = true;
+                setTimeout(function () {
+                    if (condition) {
+                        skills.push("java")
+                        resolve()
+                    }
+                    else {
+                        reject()
+                    }
+                }, 4000)
+            })
+        }
+
+        async function displayresult(){
+            displayItem(skills)
+            document.write("<br>")
+            await addSkill()
+            displayItem(skills)
+        }
+
+        displayresult() 
+
+        // async
+        // await
+
+    </script>
+</body>
+
+</html>
