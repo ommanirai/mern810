@@ -71,7 +71,7 @@ function welcome(name) {
     return name;
 }
 
-welcome()
+// welcome()
 
 // es6
 // const welcomeMyBoy = (name, add) => {
@@ -83,7 +83,134 @@ welcome()
 const welcomeMyBoy = (name) => console.log("welcome my boy")
 const welcomeMyBoys = (name) => {return name}
 const welcomeMyBoyss = (name) => name;
-welcomeMyBoy()
+// welcomeMyBoy()
+
+
+var laptops = [
+    {
+    name:'acer',
+    ram:'4GB',
+    color:'red'
+},
+{
+    name:'dell',
+    ram:'4GB',
+    color:'red'
+},
+{
+    name:'acer',
+    ram:'8GB',
+    color:'red'
+},
+{
+    name:'acer',
+    ram:'16GB',
+    color:'red'
+},
+]
+var ram16 = laptops.filter(function(item, index){
+    if(item.ram == '16GB'){
+        return true;
+    }
+})
+
+var ram_16 = laptops.filter((item, index) => item.ram === "16GB")
+// console.log(ram16)
+// console.log(ram_16)
+
+
+// spread and rest operator(...)
+// spread
+var a = {
+    color:'red'
+}
+var b = {
+    name:'acer'
+}
+
+var c = {
+    // object concatinate
+    // convert to immutable
+    ...a,
+    ...b,
+    ram:'16GB'
+}
+a.generation = 'i7'
+// console.log(c)
+// console.log(a)
+// console.log(b)
 
 
 
+
+var d = {
+    first_name: 'ram',
+    add: 'vedu',
+    last_name:"shrestha",
+    email:'ram@gmail.com'
+}
+
+// rest
+function display(details) {
+    return details;
+}
+var { first_name, ...rest } = displayDetails(d)
+// console.log("first name: ", first_name)
+// console.log("rest is: ", rest)
+
+
+
+// import and export
+// file to file communication
+var X = 23;
+function Demo(){
+
+}
+
+// export
+/*
+two way of export:
+1. named export
+
+export function Demo(){
+
+}
+
+export function Demo1(){
+
+}
+
+export Data = x
+
+
+2. default export
+export default function Demo(){
+
+}
+
+export default X
+
+
+
+// import
+two way of import
+1. if named export
+import {Demo} from 'location_Of_file'
+import {Demo, Demo1} from 'es6.js'
+
+
+2. if default export
+import something from 'location of file'
+import DefaultData from 'es6.js'
+
+
+3. if both named and default export
+import {Demo, Demo1}, DefaultData from 'es6.js'
+
+
+//  NOTE
+=> THERE CAN BE MILTIPLE NAMED EXPORT WITHIN A SINGLE FILE
+=> THERE CAN BE SINGLE DEFAULT EXPORT WITHIN A FILE
+=> THERE CAN BE BOTH MULTIPLE NAMED EXPORT AND SINGLE DEFAUTL EXPORT WITHIN A FILE
+
+*/
