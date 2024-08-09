@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model(DOM)</title>
+</head>
+
+<body>
+    <img src="" alt="">
+    <h1>Document Object Model</h1>
+    <h1>Document Object second Model</h1>
+    <!-- <h2 class="demo" id="random">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus commodi corporis tenetur, vero nihil libero, ad voluptates, soluta quos molestias atque! Deleniti eaque quasi similique animi, vitae dicta accusamus cumque.</h2> -->
+    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus commodi corporis tenetur, vero nihil libero, ad voluptates, soluta quos molestias atque! Deleniti eaque quasi similique animi, vitae dicta accusamus cumque.</h2>
+    <!-- 
+                            html
+                        head                            body
+                    title   style               h1      h2  h3  table   form
+    -->
+    <script>
+        /*
+        document object model
+        method
+        properties
+        
+        
+        */
+        console.log("document is: ", document)
+        var body = document.body;
+        var paragraph = document.createElement("p")
+        body.append(paragraph)
+        document.querySelector("p").innerHTML = "hi form DOM"
+        document.querySelector("h1").innerHTML = "good morning"
+        var heading = document.querySelectorAll("h1")
+        console.log("heading: ", heading)
+        heading.forEach((item, index) =>{
+            console.log(item)
+            item.innerHTML = "hi"
+        })
+
+        // document.querySelector(".demo").innerHTML = 'lorem changed'
+        // document.querySelector("#random").innerHTML = 'lorem changed'
+
+        // document.getElementById("random").innerHTML = "hi hi hi"
+        // var classSelect = document.getElementsByClassName("demo")[0]
+        // console.log("classSelect: ", classSelect)
+
+        // document.querySelector("h2").setAttribute("id", 'random')
+        document.querySelector('h2').id = "random"
+        document.querySelector('h2').style.backgroundColor = "red"
+        document.querySelector('h2').style.width = "200px"
+        document.querySelector('h2').style.height = "300px"
+
+    </script>
+</body>
+
+</html>
